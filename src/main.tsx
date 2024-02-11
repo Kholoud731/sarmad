@@ -2,20 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Details from './components/ListComponent/RecordDetailsComponent';
+import ResultsRecordDetails from './pages/ResultRecordDetails/ResultRecordDetails';
 import './index.scss';
-import App from './App';
+import Search from './pages/Search/Search';
 
 const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <Search />,
   },
   {
     path: 'users/:userId',
-    element: <Details />,
+    element: <ResultsRecordDetails />,
   },
 ]);
 
@@ -24,5 +24,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
     </QueryClientProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 );

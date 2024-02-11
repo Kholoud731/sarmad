@@ -5,7 +5,7 @@ export const initialState: FormState = {
   midName: '',
   lastName: '',
   nationality: '',
-  error: ''
+  error: '',
 };
 
 export function formReducer(state: FormState, action: FormActions) {
@@ -14,30 +14,30 @@ export function formReducer(state: FormState, action: FormActions) {
       return {
         ...state,
         firstName: (action.payload.target as HTMLInputElement)?.value,
-        error: ''
+        error: '',
       };
     case ACTIONS.CHANGE_MID_NAME_ACTION:
       return {
         ...state,
         midName: (action.payload.target as HTMLInputElement)?.value,
-        error: ''
+        error: '',
       };
     case ACTIONS.CHANGE_LAST_NAME_ACTION:
       return {
         ...state,
         lastName: (action.payload.target as HTMLInputElement)?.value,
-        error: ''
+        error: '',
       };
     case ACTIONS.CHANGE_NATIONALITY_ACTION:
       return {
         ...state,
         nationality: (action.payload.target as HTMLSelectElement).value,
-        error: ''
+        error: '',
       };
     case ACTIONS.RESET_FORM_ACTION:
-      return { ...initialState };
+      return initialState;
     case ACTIONS.THROW_ERROR_ACTION:
-        return { ...state, error: 'Please enter at least 2 letters'};
+      return { ...state, error: action.payload };
     default:
       return state;
   }

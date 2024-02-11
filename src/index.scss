@@ -1,6 +1,9 @@
-html{
+html {
   width: 1500px;
   margin: auto;
+}
+body {
+  padding: 20px;
 }
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -10,12 +13,11 @@ html{
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 // Header Styles
 
-.main-header{
+.main-header {
   font-size: xx-large;
   font-weight: 600;
   width: fit-content;
@@ -34,46 +36,43 @@ html{
   background-color: white;
   padding: 20px 40px;
   border-radius: 8px;
-  box-shadow: 3px 6px 14px -3px rgba(5,5,5,0.61);
+  box-shadow: 3px 6px 14px -3px rgba(5, 5, 5, 0.61);
   margin-bottom: 2vh;
-  &-field, &-actions{
+  &-field,
+  &-actions {
     display: flex;
     padding: 10px;
 
-    &__label{
-      font-weight:600;
-      width: 18%;
+    &__label {
+      font-weight: 600;
+      width: 20%;
     }
 
-    &__element{
-      width: 50%;
+    &__element {
+      width: 80%;
       border-radius: 4px;
       border: 1px solid gray;
       padding-left: 8px;
     }
   }
-  &-actions{
+  &-actions {
     display: flex;
-    position: absolute;
-    right: 10%;
-    top: 0%;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-evenly;
+    gap: 20px;
+    justify-content: center;
   }
-  &-error{
+  &-error {
     display: inline-block;
     padding-left: 10px;
     font-size: 14px;
     color: red;
   }
-  select{
+  select {
     border-radius: 4px;
-    width: calc(50% + 10px);
+    width: 80%;
   }
 }
 
-.button{
+.button {
   display: inline-block;
   background-color: #c2d1e2;
   border: 0;
@@ -82,8 +81,8 @@ html{
   width: 150px;
   border-radius: 8px;
   font-weight: bold;
-  box-shadow: 3px 6px 14px -3px rgba(5,5,5,0.61);
-  cursor:grab;
+  box-shadow: 3px 6px 14px -3px rgba(5, 5, 5, 0.61);
+  cursor: grab;
 
   &--disabled {
     background-color: #b3aeae;
@@ -94,21 +93,21 @@ html{
     width: 150px;
     border-radius: 8px;
     font-weight: bold;
-    box-shadow: 3px 6px 14px -3px rgba(5,5,5,0.61);
+    box-shadow: 3px 6px 14px -3px rgba(5, 5, 5, 0.61);
     cursor: not-allowed;
   }
 }
 
-a{
+a {
   text-decoration: none;
   display: block;
   color: #0067b6;
   text-align: center;
 }
 
-// Record styles 
+// Record styles
 
-.record-container{
+.record-container {
   background-color: white;
   width: 50%;
   height: fit-content;
@@ -118,21 +117,21 @@ a{
   transform: translate((-50%, -50%));
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 3px 6px 14px -3px rgba(5,5,5,0.61);
+  box-shadow: 3px 6px 14px -3px rgba(5, 5, 5, 0.61);
 
-  &-body{
+  &-body {
     width: 80%;
     margin: auto;
     height: 80%;
     padding-bottom: 20px;
 
-    .record-actions{
+    .record-actions {
       display: inline-block;
       position: absolute;
       right: 12%;
       bottom: 12%;
     }
-    .record-row{
+    .record-row {
       display: flex;
       width: 80%;
       flex-direction: row;
@@ -144,28 +143,26 @@ a{
         padding: 10px;
         border-radius: 10px;
         background-color: #c2d1e2;
-        box-shadow: 3px 6px 14px -3px rgba(5,5,5,0.61);
+        box-shadow: 3px 6px 14px -3px rgba(5, 5, 5, 0.61);
         margin-right: 20px;
       }
     }
   }
 }
 
-
-
-table{
+table {
   width: 85%;
   margin: auto;
   background-color: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 3px 6px 14px -3px rgba(5,5,5,0.61);
+  box-shadow: 3px 6px 14px -3px rgba(5, 5, 5, 0.61);
 }
-.table-action{
+.table-action {
   padding: 0;
   width: -webkit-fill-available;
 }
-th{
+th {
   text-align: justify;
   color: #0067b6;
   background-color: #c2d1e2;
@@ -174,14 +171,13 @@ th{
   max-height: 26px;
 }
 td {
-
   padding-left: 10px;
   border-bottom: 1px solid #c8c8c8;
   overflow: hidden; /* Hide any content that exceeds cell dimensions */
   text-overflow: ellipsis; /* Show ellipsis for overflowed content */
   white-space: nowrap;
 }
-tr{
+tr {
   border: 3px solid #0067b6;
 }
 
@@ -195,7 +191,7 @@ tr{
   margin: auto;
   padding: 40px;
   border-radius: 10px;
-  box-shadow: 3px 6px 14px -3px rgba(5,5,5,0.61);
+  box-shadow: 3px 6px 14px -3px rgba(5, 5, 5, 0.61);
 }
 
 .oops {
@@ -206,10 +202,10 @@ tr{
 
 .message {
   font-size: 40px;
-  padding: 10px
+  padding: 10px;
 }
 
-// loader 
+// loader
 .loading-screen {
   display: flex;
   justify-content: center;
@@ -237,17 +233,15 @@ tr{
 
 // slider styles
 
-.slider{
+.slider {
   width: 600px;
   display: flex;
   text-align: center;
   justify-content: space-between;
-  left: 35%;
-  position: absolute;
-  bottom: 2vh;
+  margin: 20px auto;
 }
 
-.current-page{
+.current-page {
   display: flex;
   font-weight: bold;
   justify-content: center;
@@ -256,9 +250,14 @@ tr{
   width: 30%;
   border-radius: 10px;
   color: #0067b6;
-  box-shadow: 3px 6px 14px -3px rgba(5,5,5,0.61);
+  box-shadow: 3px 6px 14px -3px rgba(5, 5, 5, 0.61);
 }
 
-.button.next, .button.previous {
+.button.next,
+.button.previous {
   background-color: white;
+}
+
+input.error {
+  border: 1px solid red;
 }

@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 
-const Details = () => {
+const ResultsRecordDetails = () => {
   const location = useLocation();
 
   const { name, nat, des, score, birth } = location.state;
@@ -13,29 +13,23 @@ const Details = () => {
         </div>
 
         <div className="record-row">
-          <span className='record-row-title'>Natonality</span>
+          <span className="record-row-title">Natonality</span>
           <span>{nat}</span>
         </div>
 
         <div className="record-row">
-        <span className='record-row-title'>
-            Score
-            </span>
-            <span>{score}</span>
+          <span className="record-row-title">Score</span>
+          <span>{score}</span>
         </div>
 
         <div className="record-row">
-        <span className='record-row-title'>
-            Discription
-            </span>
-            <span>{des}</span>
+          <span className="record-row-title">Discription</span>
+          <span>{des}</span>
         </div>
 
         <div className="record-row">
-        <span className='record-row-title'>
-            Place of Birth
-            </span>
-            <span>{`${birth || 'Not Known'}`}</span>
+          <span className="record-row-title">Place of Birth</span>
+          <span>{`${birth || 'Not Known'}`}</span>
         </div>
 
         <div className="record-actions">
@@ -48,4 +42,4 @@ const Details = () => {
   );
 };
 
-export default Details;
+export default ResultsRecordDetails;
